@@ -1,0 +1,335 @@
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q001 ||
+-------------------------------
+id	p_lastname	p_birthday	p_creationdate	p_gender	p_browserused	p_locationip	pl_name	
+BIGINT	VARCHAR	VARCHAR	BIGINT	INTEGER	INTEGER	VARCHAR	VARCHAR	
+[ Rows: 0]
+
+33.000000
+33.000000
+32.000000
+32.000000
+32.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q002 ||
+-------------------------------
+id	p_lastname	p_birthday	p_creationdate	p_gender	p_browserused	p_locationip	pl_name	
+BIGINT	VARCHAR	VARCHAR	BIGINT	INTEGER	INTEGER	VARCHAR	VARCHAR	
+[ Rows: 45]
+[1st row]26388279093938,Khan,1986-02-08,1330481809,2,3,59.98.202.122,Pondicherry
+
+61.000000
+61.000000
+61.000000
+63.000000
+62.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q003 ||
+-------------------------------
+id	p_lastname	p_birthday	p_creationdate	p_gender	p_browserused	p_locationip	pl_name	
+BIGINT	VARCHAR	VARCHAR	BIGINT	INTEGER	INTEGER	VARCHAR	VARCHAR	
+[ Rows: 3516]
+[1st row]37383395358682,Kapoor,1989-11-19,1352859480,2,1,61.8.142.2,Loni
+
+113.000000
+111.000000
+109.000000
+110.000000
+108.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q004 ||
+-------------------------------
+id	p_firstname	p_lastname	c_id	c_content	c_creationdate	
+BIGINT	VARCHAR	VARCHAR	BIGINT	VARCHAR	BIGINT	
+[ Rows: 61808]
+[1st row]17592186072140,Imtiaz,Khan,4947802324993,yes,1313591219
+
+852.000000
+853.000000
+863.000000
+1002.000000
+957.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q005 ||
+-------------------------------
+id	p_firstname	p_lastname	
+BIGINT	VARCHAR	VARCHAR	
+[ Rows: 25]
+[1st row]10995116325562,Tibor,Toth
+
+918.000000
+949.000000
+946.000000
+922.000000
+897.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q006 ||
+-------------------------------
+id	p_firstname	p_lastname	
+BIGINT	VARCHAR	VARCHAR	
+[ Rows: 303491]
+[1st row]24189255843677,Li,Wang
+
+145448.000000
+148149.000000
+124831.000000
+117764.000000
+116770.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q007 ||
+-------------------------------
+t_name	
+VARCHAR	
+[ Rows: 287088]
+[1st row]Arnold_Schoenberg
+
+254.000000
+254.000000
+249.000000
+246.000000
+264.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q008 ||
+-------------------------------
+f_title	
+VARCHAR	
+[ Rows: 188115]
+[1st row]Album 3 of Mahinda Perera
+
+500.000000
+502.000000
+500.000000
+503.000000
+494.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q009 ||
+-------------------------------
+f_title	
+VARCHAR	
+[ Rows: 25553252]
+[1st row]Album 2 of Mahinda Perera
+
+2316.000000
+2001.000000
+1953.000000
+1984.000000
+1973.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q010 ||
+-------------------------------
+t_name	
+VARCHAR	
+[ Rows: 0]
+
+220.000000
+351.000000
+344.000000
+229.000000
+209.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q011 ||
+-------------------------------
+t_name	
+VARCHAR	
+[ Rows: 1277]
+[1st row]John_Locke
+
+408.000000
+418.000000
+425.000000
+407.000000
+411.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q012 ||
+-------------------------------
+p_personid	p_firstname	p_lastname	l_creationdate	c_content	
+BIGINT	VARCHAR	VARCHAR	BIGINT	VARCHAR	
+[ Rows: 97]
+[1st row]2199023258732,Werner,Becker,1335122385,About Nikolai Rimsky-Korsakov| ssical music repertoire| aAbout Saint-Domingue
+
+1094.000000
+1105.000000
+1097.000000
+1111.000000
+1092.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q013 ||
+-------------------------------
+c_creatorid	p_firstname	p_lastname	c_creationdate	c_id	c_content	
+BIGINT	VARCHAR	VARCHAR	BIGINT	BIGINT	VARCHAR	
+[ Rows: 74]
+[1st row]17592186086733,Carlos,Machado,1359440892,9895622002941,roflol
+
+1262.000000
+1303.000000
+1202.000000
+1263.000000
+1308.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q014 ||
+-------------------------------
+p_firstname	p_lastname	c_creationdate	
+VARCHAR	VARCHAR	BIGINT	
+[ Rows: 66174]
+[1st row]Imtiaz,Khan,1313591219
+
+527.000000
+478.000000
+531.000000
+518.000000
+557.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q015 ||
+-------------------------------
+p_firstname	p_lastname	c_creationdate	
+VARCHAR	VARCHAR	BIGINT	
+[ Rows: 2445313]
+[1st row]Emil,Kovacs,1342803345
+
+666.000000
+666.000000
+656.000000
+666.000000
+666.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q016 ||
+-------------------------------
+id	p_firstname	p_lastname	p_gender	pl_name	
+BIGINT	VARCHAR	VARCHAR	INTEGER	VARCHAR	
+[ Rows: 7681]
+[1st row]57880,Andrzej,Zakrzewski,1,Radom
+
+66.000000
+67.000000
+66.000000
+64.000000
+65.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q017 ||
+-------------------------------
+id	p_firstname	p_lastname	o_name	pc_workfrom	
+BIGINT	VARCHAR	VARCHAR	VARCHAR	INTEGER	
+[ Rows: 0]
+
+40.000000
+41.000000
+38.000000
+38.000000
+39.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q018 ||
+-------------------------------
+id	p_firstname	p_lastname	o_name	pc_workfrom	
+BIGINT	VARCHAR	VARCHAR	VARCHAR	INTEGER	
+[ Rows: 1080]
+[1st row]2199023326324,Peng,Zhou,Chang'an_Airlines,2001
+
+59.000000
+71.000000
+67.000000
+60.000000
+69.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q019 ||
+-------------------------------
+p_personid	p_firstname	p_lastname	
+BIGINT	VARCHAR	VARCHAR	
+[ Rows: 22420]
+[1st row]10995116345403,Emil,Kovacs
+
+772.000000
+764.000000
+718.000000
+802.000000
+906.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q020 ||
+-------------------------------
+p_firstname	p_lastname	p_birthday	p_locationip	p_browserused	pl_placeid	p_gender	p_creationdate	
+VARCHAR	VARCHAR	VARCHAR	VARCHAR	INTEGER	BIGINT	INTEGER	BIGINT	
+[ Rows: 1]
+Mahinda,Perera,1989-12-03,119.235.7.103,2,1353,1,1266161530
+
+1.000000
+1.000000
+1.000000
+0.000000
+1.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q021 ||
+-------------------------------
+c_id	c_creationdate	ps_id	p_personid	p_firstname	p_lastname	
+BIGINT	BIGINT	BIGINT	BIGINT	VARCHAR	VARCHAR	
+[ Rows: 97]
+[1st row]5497558969809,1318116363,5497558969806,6597069780295,Djibril Diop,Dia
+
+506.000000
+488.000000
+502.000000
+504.000000
+499.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q022 ||
+-------------------------------
+p_personid	p_firstname	p_lastname	k_creationdate	
+BIGINT	VARCHAR	VARCHAR	BIGINT	
+[ Rows: 12]
+[1st row]6597069780295,Djibril Diop,Dia,1279813811
+
+36.000000
+40.000000
+36.000000
+34.000000
+36.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q023 ||
+-------------------------------
+c_content	c_creationdate	
+VARCHAR	BIGINT	
+[ Rows: 1]
+yes,1313591219
+
+1.000000
+1.000000
+0.000000
+1.000000
+1.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q024 ||
+-------------------------------
+p_personid	p_firstname	p_lastname	
+BIGINT	VARCHAR	VARCHAR	
+[ Rows: 1]
+17592186072140,Imtiaz,Khan
+
+5.000000
+4.000000
+4.000000
+5.000000
+5.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q025 ||
+-------------------------------
+f_forumid	f_title	p_personid	p_firstname	p_lastname	
+BIGINT	VARCHAR	BIGINT	VARCHAR	VARCHAR	
+[ Rows: 1]
+0,Wall of Mahinda Perera,933,Mahinda,Perera
+
+110.000000
+110.000000
+111.000000
+111.000000
+135.000000
+-------------------------------
+|| LDBC_LIGHT_OPTIMIZED_Q026 ||
+-------------------------------
+c_id	c_content	c_creationdate	p_personid	p_firstname	p_lastname	
+BIGINT	VARCHAR	BIGINT	BIGINT	VARCHAR	VARCHAR	
+[ Rows: 2]
+[1st row]8246337208332,About John Howard| died in combaAbout Isabella I of Castile| r right to thAbo,1342834761,36226,Wolfgang,Richter
+
+925.000000
+913.000000
+926.000000
+958.000000
+863.000000
