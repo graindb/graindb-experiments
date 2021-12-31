@@ -38,7 +38,7 @@ plt.ylabel('runtime in msec (log scale)', fontsize=16)
 plt.xlabel('selectivity of Knows', fontsize=16)
 axes.plot(x_axis, list1_1, 'D-', label='DuckDB', alpha=0.9, markersize=5)
 axes.plot(x_axis, list1_2, 'o-', label='GRainDB', alpha=0.6, markersize=5)
-axes.plot(x_axis, list1_3, '*-', label='GrahflowDB', alpha=0.8, markersize=5)
+axes.plot(x_axis, list1_3, '*-', label='GraphflowDB', alpha=0.8, markersize=5)
 axes.plot(x_axis, list1_4, 's-', label='Neo4j', alpha=0.8, markersize=5)
 
 axes.tick_params(axis='both', labelsize=14)

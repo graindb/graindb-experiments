@@ -29,7 +29,6 @@ public:
 	string ExtraRenderInformation() const override;
 
 private:
-	void InitializeAList();
 	void InitializeZoneFilter();
 	void PassZoneFilter();
 	void AppendHTBlocks(PhysicalOperatorState *state, DataChunk &chunk, DataChunk &build_chunk);

@@ -10,7 +10,7 @@ using namespace std;
 
 #define LDBC_QUERY_BODY(QNR, PARAM, ENABLE_RAIS, JO_NAME)                                                              \
 	virtual void Load(DuckDBBenchmarkState *state) {                                                                   \
-		ldbc::dbgen_micro(state->conn, SF, 9, ENABLE_RAIS);                                                            \
+		ldbc::dbgen_micro(state->conn, SF, ENABLE_RAIS);                                                               \
 	}                                                                                                                  \
 	virtual string GetQuery() {                                                                                        \
 		return ldbc::get_micro_query(QNR, PARAM);                                                                      \

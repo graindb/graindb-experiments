@@ -99,6 +99,6 @@ Under each configuration, re-compile the codebase, and run the following command
 ```
 
 ### Usage
-We recommemd users to use the benchmark freamwork for more evaluations.
+We recommend users to use the benchmark framework for more evaluations.
 Take imdb benchmark as an example, its source code is located at `benchmark/imdb/`, and `third_party/imdb` provides data, queries and injected join orders (empty join order file means use DuckDB's default join order optimizer).
 Users can follow our examples (imdb, ldbc and tpch) to set up more benchmarks, as this is an easy and efficient way to perform evaluations.

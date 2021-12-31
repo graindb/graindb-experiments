@@ -190,8 +190,7 @@ public:
 private:
 	//! Apply a bitmask to the hashes
 	void ApplyBitmask(Vector &hashes, idx_t count) const;
-	void ApplyBitmask(Vector &hashes, const SelectionVector &sel, idx_t count, Vector &pointers);
-	void ApplyKeymask(Vector &keys, const SelectionVector &sel, idx_t count, Vector &pointers);
+	void ApplyBitmask(Vector &hashes, const SelectionVector &sel, idx_t count, Vector &pointers) const;
 	//! Insert the given set of locations into the HT with the given set of
 	//! hashes. Caller should hold lock in parallel HT.
 	void InsertHashes(Vector &hashes, idx_t count, data_ptr_t key_locations[]);

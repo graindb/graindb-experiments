@@ -43,25 +43,6 @@ PhysicalMergeSIPJoin::PhysicalMergeSIPJoin(ClientContext &context, LogicalOperat
 	                              LogicalOperator::MapTypes(children[1]->GetTypes(), right_projection_map), type);
 }
 
-void PhysicalMergeSIPJoin::InitializeAList() {
-	auto &rai_info = conditions[0].rais[0];
-	// determine the alist for usage
-	switch (rai_info->rai_type) {
-	case RAIType::TARGET_EDGE: {
-		rai_info->forward = true;
-		rai_info->compact_list = &rai_info->rai->alist->compact_forward_list;
-		break;
-	}
-	case RAIType::SOURCE_EDGE: {
-		rai_info->forward = false;
-		rai_info->compact_list = &rai_info->rai->alist->compact_backward_list;
-		break;
-	}
-	default:
-		break;
-	}
-}
-
 void PhysicalMergeSIPJoin::InitializeZoneFilter() {
 	auto &rai_info = conditions[0].rais[0];
 	auto zone_size = (rai_info->left_cardinalities[0] / STANDARD_VECTOR_SIZE) + 1;
@@ -221,7 +202,6 @@ void PhysicalMergeSIPJoin::GetChunkInternal(ClientContext &context, DataChunk &c
 	if (!state->initialized) {
 		state->cached_chunk.Initialize(types);
 
-		idx_t build_side_size = 0;
 		auto right_state = children[1]->GetOperatorState();
 		DataChunk right_chunk, build_chunk, im_chunk; // im_chunk: intermediate_chunk, [right_chunk.columns, tid]
 		right_chunk.Initialize(children[1]->GetTypes());
@@ -231,8 +211,6 @@ void PhysicalMergeSIPJoin::GetChunkInternal(ClientContext &context, DataChunk &c
 		build_chunk.InitializeEmpty(hash_table->build_types);
 		state->join_keys.InitializeEmpty(hash_table->condition_types);
 		state->right_condition_chunk.InitializeEmpty(hash_table->condition_types);
-		// initialize alist pointer
-		// InitializeAList();
 		auto &rai_info = conditions[0].rais[0];
 		while (true) {
 			children[1]->GetChunk(context, right_chunk, right_state.get());
@@ -242,7 +220,6 @@ void PhysicalMergeSIPJoin::GetChunkInternal(ClientContext &context, DataChunk &c
 			if (right_chunk.size() == 0) {
 				break;
 			}
-			build_side_size += right_chunk.size();
 			do {
 				rai_info->rai->GetVertexes(right_chunk, state->right_condition_chunk, im_chunk, state->left_tuple,
 				                           state->right_tuple, rai_info->forward);
@@ -294,9 +271,6 @@ string PhysicalMergeSIPJoin::ExtraRenderInformation() const {
 	for (auto &it : conditions) {
 		string op = ExpressionTypeToOperator(it.comparison);
 		extra_info += it.left->GetName() + op + it.right->GetName() + "\n";
-		//		for (auto &rai : it.rais) {
-		//			extra_info += rai->ToString() + "\n";
-		//		}
 	}
 	auto &rai_info = conditions[0].rais[0];
 	extra_info += rai_info->ToString() + "\n";

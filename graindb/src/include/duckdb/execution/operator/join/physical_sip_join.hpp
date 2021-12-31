@@ -28,8 +28,6 @@ public:
 	string ExtraRenderInformation() const override;
 
 private:
-	void InitializeAList();
-//	void InitializeBitMaskFilter();
 	void PassBitMaskFilter();
 	void ProbeHashTable(ClientContext &context, DataChunk &chunk, PhysicalOperatorState *state_);
 	void PerformSHJoin(ClientContext &context, DataChunk &chunk, PhysicalOperatorState *state_);

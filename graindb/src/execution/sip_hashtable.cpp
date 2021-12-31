@@ -83,7 +83,7 @@ void SIPHashTable::ApplyBitmask(Vector &hashes, idx_t count) const {
 	}
 }
 
-void SIPHashTable::ApplyBitmask(Vector &hashes, const SelectionVector &sel, idx_t count, Vector &pointers) {
+void SIPHashTable::ApplyBitmask(Vector &hashes, const SelectionVector &sel, idx_t count, Vector &pointers) const {
 	VectorData hdata;
 	hashes.Orrify(count, hdata);
 
@@ -95,21 +95,6 @@ void SIPHashTable::ApplyBitmask(Vector &hashes, const SelectionVector &sel, idx_
 		auto hindex = hdata.sel->get_index(rindex);
 		auto hash = hash_data[hindex];
 		result_data[rindex] = main_ht + (hash & bitmask);
-	}
-}
-
-void SIPHashTable::ApplyKeymask(Vector &keys, const SelectionVector &sel, idx_t count, Vector &pointers) {
-	VectorData kdata;
-	keys.Orrify(count, kdata);
-
-	auto key_data = (hash_t *)kdata.data;
-	auto result_data = FlatVector::GetData<data_ptr_t *>(pointers);
-	auto main_ht = (data_ptr_t *)hash_map->node->buffer;
-	for (idx_t i = 0; i < count; i++) {
-		auto rindex = sel.get_index(i);
-		auto kindex = kdata.sel->get_index(rindex);
-		auto key = key_data[kindex];
-		result_data[rindex] = main_ht + key;
 	}
 }
 

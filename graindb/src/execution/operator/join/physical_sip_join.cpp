@@ -38,30 +38,6 @@ PhysicalSIPJoin::PhysicalSIPJoin(ClientContext &context, LogicalOperator &op, un
 	                              LogicalOperator::MapTypes(children[1]->GetTypes(), right_projection_map), type);
 }
 
-void PhysicalSIPJoin::InitializeAList() {
-	auto &rai_info = conditions[0].rais[0];
-	// determine the alist for usage
-	switch (rai_info->rai_type) {
-	case RAIType::SELF:
-	case RAIType::EDGE_SOURCE: {
-		rai_info->compact_list = rai_info->forward ? &rai_info->rai->alist->compact_forward_list
-		                                           : &rai_info->rai->alist->compact_backward_list;
-		break;
-	}
-	case RAIType::EDGE_TARGET: {
-		if (rai_info->rai->rai_direction == RAIDirection::UNDIRECTED) {
-			rai_info->compact_list = &rai_info->rai->alist->compact_backward_list;
-		} else {
-			rai_info->compact_list = nullptr;
-		}
-		break;
-	}
-	default:
-		rai_info->compact_list = nullptr;
-		break;
-	}
-}
-
 void PhysicalSIPJoin::ProbeHashTable(ClientContext &context, DataChunk &chunk, PhysicalOperatorState *state_) {
 	auto state = reinterpret_cast<PhysicalSIPJoinState *>(state_);
 	if (state->child_chunk.size() > 0 && state->scan_structure) {
