@@ -27,7 +27,7 @@ Each configuration takes a column in the final csv file as the following order: 
 #### Selectivity
 - Prepare input csv files:
     - Create an empty file `result/micro_p.csv`. Append "Selectivity" as the first column in the csv file.
-    - Append performance columns from `graindb/evaluations/micro_p_duckdb_avg.out`, `graindb/evaluations/micro_p_graindb_avg.out`, `graphflowdb/evaluations/micro_p_gfdb_avg.out`, and `neo4j/micro_p_neo_avg.csv` into `result/micro_p.csv`.
+    - Append performance columns from `graindb/evaluations/micro_p_duckdb_avg.out`, `graindb/evaluations/micro_p_graindb_avg.out`, `graphflowdb/evaluations/micro_p_gfdb_avg.out`, and `neo4j/micro_p_neo_results.csv` into `result/micro_p.csv`.
     - The final csv file's header is `Selectivity,DuckDB,GRainDB,GFDB,Neo4j`.
     - `result/micro_k.csv` is prepared in a similar way.
 
