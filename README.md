@@ -1,3 +1,5 @@
+Experiment evaluations fo "[Making RDBMSs Efficient on Graph Workloads Through Predefined Joins](https://github.com/graindb/graindb-experiments/paper/graindb.pdf)".
+
 Please see `graindb/`, `graphflowdb/`, and `neo4j/` directories for detailed instructions to run experiments related to each system.
 
 ### Plotting
