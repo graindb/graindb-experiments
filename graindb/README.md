@@ -34,7 +34,7 @@ Run `make` in the root directory to compile the sources.
 #### Run evaluations of DuckDB, DuckDB-MV and GRainDB on SNB-M:
 ```shell
 > ./build/release/benchmark/benchmark_runner "LDBC_LIGHT_OPTIMIZED_Q[0-9][0-9][0-9]" --out=evaluations/snb_duckdb.out
-> ./build/release/benchmark/benchmark_runner "LDBC_LIGHT_VIEWS_.*" --out=evaluations/mv_duckdb.out
+> ./build/release/benchmark/benchmark_runner "SNB_M_LIGHT_VIEWS_.*" --out=evaluations/mv_duckdb.out
 > ./build/release/benchmark/benchmark_runner "LDBC_LIGHT_OPTIMIZED_Q[0-9][0-9][0-9]A" --out=evaluations/snb_graindb.out
 ```
 
@@ -60,7 +60,7 @@ Run `make` in the root directory to compile the sources.
 
 ## Detailed Evaluation
 ### Ablation Study (8.3.1)
-Configurations for GRainDB:
+Configurations for GRainDB (modify `src/include/duckdb/common/constants.hpp`):
 - GR-FULL. Set both `ENABLE_RAI_JOIN_MERGE` and `ENABLE_ALISTS` to `true`.
 - GR-JM. Set `ENABLE_RAI_JOIN_MERGE` to `false`, and keep `ENABLE_ALISTS` to `true`.
 - GR-JM-RSJ. Set both `ENABLE_RAI_JOIN_MERGE` and `ENABLE_ALISTS` to `false`.
