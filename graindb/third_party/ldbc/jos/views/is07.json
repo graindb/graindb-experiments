@@ -3,11 +3,11 @@
   "children": [
     {
       "type": "SCAN",
-      "table": "person"
+      "table": "pm2"
     },
     {
       "type": "SCAN",
-      "table": "m1m2"
+      "table": "m1"
     }
   ]
 }
