@@ -3,20 +3,11 @@
   "children": [
     {
       "type": "SCAN",
-      "table": "p2"
+      "table": "p2lc"
     },
     {
-      "type": "JOIN",
-      "children": [
-        {
-          "type": "SCAN",
-          "table": "likes_comment"
-        },
-        {
-          "type": "SCAN",
-          "table": "p1c"
-        }
-      ]
+      "type": "SCAN",
+      "table": "p1c"
     }
   ]
 }
