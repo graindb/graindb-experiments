@@ -9,7 +9,7 @@ Build and Setup
 * Setup:
 ```shell
 export GRAPHFLOW_HOME=`pwd`
-export JAVA_OPTS="-Xmx200g -Xms200g -XX:ParallelGCThreads=8
+export JAVA_OPTS="-Xmx200g -Xms200g -XX:ParallelGCThreads=8"
 ```
 
 * To do a full clean build: `./gradlew clean build installDist`
