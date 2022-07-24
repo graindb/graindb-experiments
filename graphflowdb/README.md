@@ -6,6 +6,9 @@
 
 Build and Setup
 -----------------
+* Requirements:
+Java 11
+
 * Setup:
 ```shell
 export GRAPHFLOW_HOME=`pwd`
