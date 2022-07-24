@@ -7,7 +7,7 @@ Please see `graindb/`, `graphflowdb/`, and `neo4j/` directories for detailed ins
 **End to end benchmarks: JOB, SNB-M, TPC-H.**
 - Prepare input csv files:
 	- Merge `graindb/evaluations/job_duckdb_avg.out` and `graindb/evaluations/job_graindb_avg.out` into `result/end2end_job.csv`.
-	- Merge `graindb/evaluations/snb_duckdb_avg.out`, `graindb/evaluations/mv_duckdb_avg.out`, and `graindb/evaluations/snb_graindb_avg.out` into `result/end2end_snb.csv`.
+	- Merge `graindb/evaluations/snb_duckdb_avg.out`, `graindb/evaluations/mv_duckdb_avg.out`, `graindb/evaluations/snb_graindb_avg.out` and `graphflowdb/evaluations/snb_gfdb_avg.out` into `result/end2end_snb.csv`.
 	- Merge `graindb/evaluations/tpch_duckdb_avg.out` and `graindb/evaluations/tpch_graindb_avg.out` into `result/end2end_tpch.csv`.
 - Plot the graphs:
 ```shell
