@@ -1,4 +1,7 @@
-# Setup
+## Requirements
+Java 11.
+
+## Setup
 - To simulate an in-memory version of Neo4j, you need to first create a ramDisk and perform all following inside the ramdisk.
 - Create a dataset directory under current root directory. `mkdir dataset`
 
